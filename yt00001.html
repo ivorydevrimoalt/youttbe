@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Camera with Playbar</title>
+    <title>Camera with Colors</title>
     <style>
         body {
             background-color: black;
@@ -22,39 +22,15 @@
         #camera {
             width: 100%;
             height: 100%;
-        }
-
-        #playbar {
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
-            width: 100%;
-            height: 10px;
-            background-color: black;
-        }
-
-        #playbar-progress {
-            height: 100%;
-            background-color: red;
-            animation: playbar-animation 2s infinite linear;
-        }
-
-        @keyframes playbar-animation {
-            0% {
-                width: 0%;
-            }
-            100% {
-                width: 100%;
-            }
         }
     </style>
 </head>
 <body>
     <div id="camera-container">
         <video id="camera" autoplay></video>
-        <div id="playbar">
-            <div id="playbar-progress"></div>
-        </div>
     </div>
     <script>
         navigator.mediaDevices.getUserMedia({ video: true })
@@ -68,6 +44,7 @@
     </script>
 </body>
 </html>
+
 
 <script>
 document.addEventListener('mousemove', (event) => {
